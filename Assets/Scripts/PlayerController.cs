@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public string nextSceneVerify;
 
+    private SpriteRenderer sp;
+
     void Awake()
     {
         if (instance == null)
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,12 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal") * moveSpeed;
         moveVertical = Input.GetAxisRaw("Vertical") * moveSpeed;
+        //Debug.Log(moveHorizontal);
+        if (moveHorizontal > 0) {
+            sp.flipX = false;
+        } else if (moveHorizontal < 0) {
+            sp.flipX = true;
+        }
     }
 
     void FixedUpdate()
