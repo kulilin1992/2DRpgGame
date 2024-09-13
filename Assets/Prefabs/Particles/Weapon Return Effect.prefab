@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 2619243344636021091}
   - component: {fileID: 2619243344636021100}
   - component: {fileID: 2619243344636021101}
+  - component: {fileID: -3302426381551164864}
   m_Layer: 0
   m_Name: Weapon Return Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2619243344636021091
 Transform:
   m_ObjectHideFlags: 0
@@ -4900,3 +4901,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-3302426381551164864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619243344636021102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8e24b36f0f6ec439cbb54f0f3019e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDestoryGameObject: 0
+  lifeTime: 0.5

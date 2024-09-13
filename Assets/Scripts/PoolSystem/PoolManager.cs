@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    [SerializeField] Pool[] playerBulletPools;
-    [SerializeField] Pool[] enemyBulletPools;
+    // [SerializeField] Pool[] playerBulletPools;
+     [SerializeField] Pool[] enemyBulletPools;
 
-    [SerializeField] Pool[] vFxPools;
+     [SerializeField] Pool[] effectPools;
 
-    [SerializeField] Pool[] enemyPools;
+    //[SerializeField] Pool[] enemyPools;
 
 
     static Dictionary<GameObject, Pool> dictionary;
@@ -18,10 +18,10 @@ public class PoolManager : MonoBehaviour
     void Awake()
     {
         dictionary = new Dictionary<GameObject, Pool>();
-        Initialize(playerBulletPools);
-        Initialize(enemyBulletPools);
-        Initialize(vFxPools);
-        Initialize(enemyPools);
+        // Initialize(playerBulletPools);
+         Initialize(enemyBulletPools);
+         Initialize(effectPools);
+        //Initialize(enemyPools);
     }
 
 
@@ -29,10 +29,10 @@ public class PoolManager : MonoBehaviour
     void OnDisable()
     {
         Debug.Log("aaa");
-        CheckPoolSize(playerBulletPools);
-        CheckPoolSize(enemyBulletPools);
-        CheckPoolSize(vFxPools);
-        CheckPoolSize(enemyPools);
+        // CheckPoolSize(playerBulletPools);
+         CheckPoolSize(enemyBulletPools);
+         CheckPoolSize(effectPools);
+       // CheckPoolSize(enemyPools);
     }
     #endif
 

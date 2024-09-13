@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2796277938684045407}
   - component: {fileID: 651070371067763595}
   - component: {fileID: 6567132284029905903}
+  - component: {fileID: -436375387350246554}
   m_Layer: 0
   m_Name: Hex Effect
   m_TagString: Untagged
@@ -106,3 +107,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-436375387350246554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025276471599065829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8e24b36f0f6ec439cbb54f0f3019e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDestoryGameObject: 0
+  lifeTime: 2

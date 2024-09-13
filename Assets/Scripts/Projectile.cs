@@ -26,8 +26,11 @@ public class Projectile : MonoBehaviour
         lifeTimer += Time.deltaTime;
         if (lifeTimer >= maxLifeTime)
         {
-            Instantiate(destoryEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            PoolManager.Release(destoryEffect, transform.position, Quaternion.identity);
+            //Instantiate(destoryEffect, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            lifeTimer = 0;
         }
     }
 
@@ -37,8 +40,20 @@ public class Projectile : MonoBehaviour
         {
             other.GetComponentInChildren<HealthBar>().hp -= 10;
             other.GetComponentInChildren<HealthBar>().UpdateHp();
-            Instantiate(attackEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            PoolManager.Release(attackEffect, transform.position, Quaternion.identity);
+            //Instantiate(attackEffect, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            lifeTimer = 0;
+        }
+
+        if (other.gameObject.tag == "Wall")
+        {
+            PoolManager.Release(attackEffect, transform.position, Quaternion.identity);
+            //Instantiate(attackEffect, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            lifeTimer = 0;
         }
     }
 }

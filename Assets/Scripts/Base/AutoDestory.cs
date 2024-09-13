@@ -7,7 +7,7 @@ public class AutoDestory : MonoBehaviour
     // Start is called before the first frame update
     
     [SerializeField] bool isDestoryGameObject;
-    [SerializeField] float lifeTime = 3f;
+    [SerializeField] float lifeTime = 2f;
 
     WaitForSeconds waitLiftTime;
 
